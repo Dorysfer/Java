@@ -5,6 +5,8 @@
  */
 package ejercicioscomplejos;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Home
@@ -19,7 +21,7 @@ public class RecorrerVectoryVerDigitos {
        
         Scanner leer = new Scanner(System.in);
         
-        int tamanoVector = (int) (Math.random()*50);
+        int tamanoVector = (int) (Math.random()*20);
         int[]vector = new int [tamanoVector];
         System.out.println("El programa asignó el tamaño al vector: " +tamanoVector);        
         
@@ -36,17 +38,7 @@ public class RecorrerVectoryVerDigitos {
             System.out.print(" " +vector[i]+ " ");
         }
     }
-public static void llenarVector(int[] vector, int tamanoVector){
-        System.out.println("El vector creado es: ");
-        for (int i = 0; i < tamanoVector; i++) {
-            int num2 = (int) (Math.random()*100000);
-            vector[i]=num2;
-            System.out.print(" " +vector[i]+ " ");
-        }
-    }
-
-    }
-   public static void contabilizandoNum (int[] vector, int tamanoVector){
+       public static void contabilizandoNum (int[] vector, int tamanoVector){
        
         int cont1 =0;
         int cont2 =0;
@@ -57,7 +49,7 @@ public static void llenarVector(int[] vector, int tamanoVector){
         for (int i = 0; i <tamanoVector; i++) {
             String digitos = String.valueOf(vector[i]);
             
-            System.out.print(digitos);
+          //  System.out.print(digitos);
             
             switch (digitos.length()){
                 case 1:
@@ -95,5 +87,6 @@ public static void llenarVector(int[] vector, int tamanoVector){
             System.out.println("El vector contiene " +cont5+ " números de 5 dígitos");
         }
 
- 
+       }
 }
+
